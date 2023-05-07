@@ -7,15 +7,19 @@
         <mat-icon>auto_awesome</mat-icon>
         <span class="menu-text">Recommend</span>
     </a>
-    <a mat-list-item routerLink="/edit" (click)="close()">
+    <a mat-list-item routerLink="/edit" (click)="close()" *ngIf="loggedInUser">
         <mat-icon>edit</mat-icon>
         <span class="menu-text">Edit</span>
     </a>
-    <a mat-list-item routerLink="/create" (click)="close()">
+    <a mat-list-item routerLink="/create" (click)="close()" *ngIf="loggedInUser">
         <mat-icon>add</mat-icon>
         <span class="menu-text">Create</span>
     </a>
-    <a mat-list-item routerLink="/login" (click)="close()">
+    <a mat-list-item routerLink="/" (click)="close(true)" *ngIf="loggedInUser">
+        <mat-icon>logout</mat-icon>
+        <span class="menu-text">Logout</span>
+    </a>
+    <a mat-list-item routerLink="/login" (click)="close()" *ngIf="!loggedInUser">
         <mat-icon>admin_panel_settings</mat-icon>
         <span class="menu-text">Login</span>
     </a>

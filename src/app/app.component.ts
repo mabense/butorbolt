@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  logout() {
+  logout(_?: boolean) {
     this.serAuth.logout();
   }
 }
