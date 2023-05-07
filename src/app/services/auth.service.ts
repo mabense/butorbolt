@@ -13,4 +13,8 @@ export class AuthService {
   login(name: string, passw: string) {
     return this.auth.signInWithEmailAndPassword(name.concat("@e.mail"), passw);
   }
+
+  isLoggedIn() {
+    return this.auth.user;
+  }
 }
