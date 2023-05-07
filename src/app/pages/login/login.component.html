@@ -1,0 +1,15 @@
+<span class="loading-indicator" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</span>
+
+<mat-card class="flex" color="accent">
+    <mat-form-field>
+        <mat-label for="name">Name: </mat-label>
+        <input matInput type="text" [formControl]="nam" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label for="pass">Password: </mat-label>
+        <input matInput type="password" [formControl]="pwd" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="login()">Login</button>
+</mat-card>

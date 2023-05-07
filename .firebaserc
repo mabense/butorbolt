@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "demobutorbolt": {
+      "hosting": {
+        "butorbolt": [
+          "demobutorbolt"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "demobutorbolt"
+  }
+}

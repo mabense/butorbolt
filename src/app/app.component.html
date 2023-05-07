@@ -1,0 +1,27 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <app-menu (onCloseSidenav)="onClose($event, sidenav)"></app-menu>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="secondary">
+            <div fxFlex fxLayout fxHide.gt-xs>
+                <button mat-icon-button (click)="onToggleSidenav(sidenav)">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div fxFlex fxLayout fxHide.xs>
+                <ul fxLayout fxLayoutGap="2em" class="navigation-items">
+                    <li><a routerLink="/login" class="menu-text">Login</a></li>
+                    <li><a routerLink="/edit" class="menu-text">Edit</a></li>
+                    <li><a routerLink="/product" class="menu-text">Recommend</a></li>
+                    <li><a routerLink="/list" class="menu-text">Search</a></li>
+                </ul>
+            </div>
+
+            <div id="logo" fxLayoutAlign="flex-end">
+                <span class="menu-text">Demo Furniture Shop</span>
+            </div>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

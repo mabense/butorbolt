@@ -1,0 +1,26 @@
+<span class="loading-indicator" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</span>
+
+<mat-card class="flex" color="accent">
+    <mat-form-field >
+        <mat-label for="name">Name: </mat-label>
+        <input matInput type="text" [formControl]="name" />
+    </mat-form-field>
+    <mat-form-field >
+        <mat-label for="name">Photo: </mat-label>
+        <input matInput type="text" [formControl]="name" />
+    </mat-form-field>
+    <mat-form-field >
+        <mat-label for="name">Price: </mat-label>
+        <input matInput type="text" [formControl]="name" />
+    </mat-form-field>
+    <mat-form-field >
+        <mat-label for="name">Stock: </mat-label>
+        <input matInput type="text" [formControl]="name" />
+    </mat-form-field>
+    <span class="button-bar">
+        <button mat-raised-button color="primary" routerLink="/list">Cancel</button>
+        <button mat-raised-button color="primary" (click)="login()">Save</button>
+    </span>
+</mat-card>
