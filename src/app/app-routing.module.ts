@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
   },
   {
+    path: 'create',
+    loadChildren: () => import('./pages/create/create.module').then(m => m.CreateModule)
+  },
+  {
     path: 'edit',
     loadChildren: () => import('./pages/edit/edit.module').then(m => m.EditModule)
     //TODO: AuthGuard
@@ -24,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/list', 
+    redirectTo: '/list',
     pathMatch: 'full'
   },
   {
