@@ -12,12 +12,12 @@ export class AppComponent implements OnInit {
   loggedInUser?: firebase.default.User | null;
 
   constructor(
-    private authService: AuthService
+    private serAuth: AuthService
   ) { }
 
   ngOnInit(): void {
 
-    this.authService.isLoggedIn().subscribe(user => {
+    this.serAuth.isLoggedIn().subscribe(user => {
       console.log(user);
       this.loggedInUser = user;
       localStorage.setItem('user', JSON.stringify(this.loggedInUser));
@@ -37,5 +37,9 @@ export class AppComponent implements OnInit {
     if (event === true) {
       sidenav.close();
     }
+  }
+
+  logout() {
+    this.serAuth.logout();
   }
 }

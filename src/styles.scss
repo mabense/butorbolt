@@ -62,8 +62,16 @@ mat-card {
 }
 
 .menu-text {
-    font-variant: small-caps;
     color: var(--c-menu);
+    font-variant: small-caps;
+    margin: 0;
+    padding: 0;
+    height: 80%;
+}
+
+.menu-text-blocked {
+    color: gray !important;
+    font-variant: small-caps;
     margin: 0;
     padding: 0;
     height: 80%;
